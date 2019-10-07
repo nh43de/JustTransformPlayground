@@ -100,7 +100,7 @@ namespace JustTransformPlayground.Ui
         {
             try
             {
-                StringOutput = JsonTransformer.Transform(_transformerJson, _inputJson);
+                StringOutput = JsonTransformer.Transform(_transformerJson, _inputJson).ToObject().ToJson(true);
             }
             catch (Exception e)
             {
